@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request: {}
   workflow_dispatch:
 
 permissions:
@@ -36,6 +37,7 @@ jobs:
           name: github-pages
           retention-days: 1
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:
