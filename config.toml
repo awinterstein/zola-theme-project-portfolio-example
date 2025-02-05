@@ -3,6 +3,8 @@ base_url = "https://awinterstein.github.io/zola-theme-project-portfolio-example"
 
 theme = "project-portfolio"
 
+title = "Project Portfolio"
+
 taxonomies = [
     {name = "projects", paginate_by = 5, feed = true},
     {name = "skills", paginate_by = 5, feed = true},
@@ -43,7 +45,7 @@ title = "Project Portfolio"
 
 [extra.index]
 title = "Main Title"
-slogan = "Slogan text that is shown under the title"
+slogan = "My great slogan"
 image = "portrait.png"
 image_alt = "Placeholder text describing the index's image."
 
