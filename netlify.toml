@@ -1,0 +1,102 @@
+[build]
+publish = "public"
+command = "zola build"
+
+[build.environment]
+# Set the version name that you want to use and Netlify will automatically use it.
+ZOLA_VERSION = "0.19.2"
+
+# The magic for deploying previews of branches.
+# We need to override the base url with whatever url Netlify assigns to our
+# preview site.  We do this using the Netlify environment variable
+# `$DEPLOY_PRIME_URL`.
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Strict-Transport-Security = "max-age=31536000; includeSubdomains; preload"
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy
+Permissions-Policy = "autoblay=(), interest-cohort=(), accelerometer=(), ambient-light-sensor=(), battery=(), bluetooth=(), browsing-topics=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), speaker-selection=(), storage-access=(), sync-xhr=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+Content-Security-Policy = "default-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; manifest-src 'self'; worker-src 'self'; form-action 'self'; connect-src 'self'; script-src 'self' 'sha256-MM7Uqp3oOgY+uyxI+B/FJMxd7l65mwXcgfH7iThX2u8='; img-src 'self'; frame-src 'none'; media-src 'self'; font-src 'self'; style-src 'self';"
+[[headers]]
+for = "*.js" #javascript
+[headers.values]
+Cache-Control = "public, max-age=604800, must-revalidate"
+[[headers]]
+for = "*.css" #stylesheet
+[headers.values]
+Cache-Control = "public, max-age=604800, must-revalidate"
+[[headers]]
+for = "*.svg" #image/favicon
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.png" #image/favicon
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.ico" #image/favicon
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.jpg" #image
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.jpeg" #image
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.gif" #image
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.webp" #image
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.avif" #image
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.mp4" #video
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.webm" #video
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.mp3" #audio
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.ogg" #audio
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.otf" #font
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.eot" #font
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.ttf" #font
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.woff" #font
+[headers.values]
+Cache-Control = "public, max-age=604800"
+[[headers]]
+for = "*.woff2" #font
+[headers.values]
+Cache-Control = "public, max-age=604800"
