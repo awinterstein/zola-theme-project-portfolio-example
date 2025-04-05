@@ -29,7 +29,7 @@ jobs:
       - name: Verify Zola binary
         run: echo "983176bbf18837bebddb2e4b4b6cdfd792342355d2eb23bef66ff336d50ccc9d  /usr/local/bin/zola" | shasum -a 256 -b -c --strict
       - name: Build website
-        run: zola build
+        run: zola build --base-url https://awinterstein.github.io/zola-theme-project-portfolio-example
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
