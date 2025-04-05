@@ -1,5 +1,6 @@
 +++
 title = "Projekte"
+render = false
 +++
 
 Der Titel und der Text dieser Seite können durch Ändern der Datei `projects.de.md` im `content`-Verzeichnis angepasst werden. Diese Seite zeigt alle Projekte an, bei denen der zusätzliche Parameter `top_project` auf `true` gesetzt ist.

@@ -5,61 +5,44 @@ theme = "project-portfolio"
 
 title = "Project Portfolio"
 
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# When set to true, the generated HTML files are minified
+minify_html = true
+
 taxonomies = [
     { name = "projects", paginate_by = 5, feed = true },
     { name = "skills", paginate_by = 5, feed = true },
     { name = "blog-tags", paginated_by = 5, feed = true },
 ]
 
-[translations]
-language_symbol = "🇬🇧"
-home = "Home"
-projects = "Projects"
-skills = "Skills"
-read_more = "Read More"
-skills_technologies = "Skills & Technologies"
-main_skills = "Main Skills"
-other_skills = "Additional Skills"
-words = "words"
-minutes = "minutes"
+[search]
+index_format = "elasticlunr_json"
 
 [languages.de]
 title = "Projekt-Portfolio"
+build_search_index = true
 taxonomies = [
     { name = "projects", paginate_by = 5, feed = true },
     { name = "skills", paginate_by = 5, feed = true },
     { name = "blog-tags", paginated_by = 5, feed = true },
 ]
 
-[languages.de.translations]
-language_symbol = "🇩🇪"
-home = "Home"
-projects = "Projekte"
-skills = "Qualifikationen"
-read_more = "Weiterlesen"
-skills_technologies = "Qualifikationen & Technologien"
-main_skills = "Top-Fähigkeiten"
-other_skills = "Weitere Fähigkeiten"
-words = "Wörter"
-minutes = "Minuten"
-
 [extra]
-enable_multilingual = true
+enable_theme_switching = true
 
 [extra.navbar]
-title = "Project Portfolio"
-
-items = [
-    { lang = "en", links = [
-        { url = "blog", name = "Blog" },
-    ] },
-    { lang = "de", links = [
-        { url = "blog", name = "Blog" },
-    ] },
+links = [
+    { url = "projects", i18n_key = "projects" },
+    { url = "skills", i18n_key = "skills" },
+    { url = "blog", i18n_key = "blog" },
 ]
 
+[extra.footer]
+notice = '<a href="https://www.winterstein.biz">Adrian Winterstein</a><br>Powered by <a href="https://getzola.org">Zola</a>, <a href="https://tailwindcss.com">TailwindCSS</a> & <a href="https://daisyui.com">DaisyUI</a>'
+
 [extra.index]
-title = "Main Title"
 slogan = "My great slogan"
 image = "portrait.png"
 image_alt = "Placeholder text describing the index's image."
@@ -73,4 +56,4 @@ mastodon = "https://social.somewhere.com/users/johndoe"
 linkedin = "https://www.linkedin.com/in/john-doe-b1234567/"
 stackoverflow = "https://stackoverflow.com/users/01234567/johndoe"
 telegram = "https://t.me/johndoe"
-email = "john.doe@gmail.com"
+email = "mail@example.com"
