@@ -4,6 +4,7 @@ base_url = "https://zola-theme-project-portfolio.winterstein.biz"
 theme = "project-portfolio"
 
 title = "Project Portfolio"
+description = "Demo site for the Project Portfolio theme for Zola."
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
@@ -44,7 +45,7 @@ notice = '<a href="https://www.winterstein.biz">Adrian Winterstein</a><br>Powere
 
 [extra.index]
 slogan = "My great slogan"
-image = "portrait.png"
+image = "portrait.webp"
 image_alt = "Placeholder text describing the index's image."
 
 [extra.social]
