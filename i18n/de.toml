@@ -1,0 +1,14 @@
+# Used by sites based on the theme
+# (not necessarily needed in all languages)
+about = "Über"
+blog = "Blog"
+blog_tags = "Schlagworte"
+home = "Home"
+main_skills = "Top-Fähigkeiten"
+other_skills = "Weitere Fähigkeiten"
+posts = "Posts"
+projects = "Projekte"
+read_more = "Weiterlesen"
+sitemap = "Sitemap"
+skills = "Qualifikationen"
+skills_technologies = "Qualifikationen & Technologien"

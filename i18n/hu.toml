@@ -1,0 +1,14 @@
+# Used by sites based on the theme
+# (not necessarily needed in all languages)
+about = "Névjegy"
+blog = "Blog"
+blog_tags = "Címkék"
+home = "Kezdőlap"
+main_skills = "Szakmai erősségek"
+other_skills = "További ismeretek"
+posts = "Bejegyzések"
+projects = "Projektek"
+read_more = "Tovább olvasom"
+sitemap = "Oldaltérkép"
+skills = "Készségek"
+skills_technologies = "Készségek & Szakmai képességek"
